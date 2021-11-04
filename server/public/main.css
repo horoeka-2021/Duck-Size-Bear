@@ -9,6 +9,10 @@ body {
   flex-direction: row;
 }
 
+.title {
+  background-color: rgb(71, 195, 200);
+}
+
 .title img {
   height: 5rem;
   width: 5rem;
