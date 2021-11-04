@@ -1,5 +1,5 @@
 export default {
- Angus : {
+  Angus : {
     image: 'angus.jpg',
     wishlist: [
       { giftname: 'sci-fi book' , gifturl: 'bookdepository.com'},
@@ -8,7 +8,7 @@ export default {
   Ben : {
     image: 'ben.jpg',
     wishlist: [
-      { giftname: 'human bird' , gifturl: 'zoo.com'},
+      { giftname: 'human bird' , gifturl: 'aucklandzoo.co.nz'},
     ]
   },
   Goretti : {
@@ -20,7 +20,7 @@ export default {
   Nicky : {
     image: 'nicky.jpg',
     wishlist: [
-      { giftname: 'milk tea' , gifturl: 'wucha.co.nz'},
+      { giftname: 'milk tea' , gifturl: 'wucha.nz'},
     ]
   },
   Julianne : {
@@ -62,25 +62,25 @@ export default {
   Seshan : {
     image: 'seshan.jpg',
     wishlist: [
-      { giftname: 'laptop' , gifturl: 'pbtech.co.nz'},
+      { giftname: 'laptop' , gifturl: 'noelleeming.co.nz'},
     ]
   },
   Crystal : {
     image: 'crystal.jpg',
     wishlist: [
-      { giftname: 'bed' , gifturl: 'bedpost.co.nz'},
+      { giftname: 'standing desk' , gifturl: 'unofurniture.co.nz'},
     ]
   },
   Sean : {
     image: 'sean.jpg',
     wishlist: [
-      { giftname: 'Set of knives' , gifturl: 'stevens.co.nz'},
+      { giftname: 'set of knives' , gifturl: 'stevens.co.nz'},
     ]
   },
   James : {
     image: 'james.jpg',
     wishlist: [
-      { giftname: 'Apple Mac' , gifturl: 'apple.com'},
+      { giftname: 'Apple Macbook Pro' , gifturl: 'apple.com'},
     ]
   },
   Troy : {
@@ -92,7 +92,7 @@ export default {
   Nathan : {
     image: 'nathan.jpg',
     wishlist: [
-      { giftname: 'Dog toys' , gifturl: 'kmart.co.nz'},
+      { giftname: 'Dog toys' , gifturl: 'animates.co.nz'},
     ]
   },
   Lauren : {
