@@ -27,9 +27,9 @@ function App () {
           <Route path='/children/:child'>
             <Child />
             <List wishList={wishList} />
-            <Link to='/children/:child/add'>
+            {/* <Link to='/children/:child/add'>
               Add Wish List
-            </Link>
+            </Link> */}
           </Route>
         </div>
 
