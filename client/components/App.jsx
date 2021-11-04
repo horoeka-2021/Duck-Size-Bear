@@ -2,6 +2,8 @@ import React from 'react'
 import Children from './Children'
 import { Route } from 'react-router-dom'
 
+import Child from './Child'
+
 function App () {
   return (
     <>
@@ -11,6 +13,7 @@ function App () {
       <div className='main'>
         <h3>Home</h3>
         <Route path='/children' component={Children}/>
+        <Route path='/children/:child' component={Child}/>
       </div>
     </>
   )
