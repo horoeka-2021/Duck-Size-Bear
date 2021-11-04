@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { Route } from 'react-router'
+import Children from './Children'
+import { Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Form from './Add'
 import List from './List'
-
-
-import Nav from './Nav'
-import Home from './Home'
+import Child from './Child'
 
 
 const initial = [
@@ -18,28 +16,29 @@ function App () {
   return (
     <>
       <div className='title'>
-        <img src='/images/color_earth.gif' />
-        <h1>Navigating the worldwide routes</h1>
       </div>
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
-      {/* <Route path='/children/:child/add' component={Add} /> */}
-
-     {/* Seshan Working */}
-
-     <Route path='/children/:child' >
-        <List wishList={wishList} />
-        <Link to='/children/:child/add'>
-          Add Wish List
-        </Link>
-      </Route>
-      <Route
-        path='/children/:child/add'
-        render={() => <Form wishList={wishList} setWishList={setWishList} />} />
+        <h3>Home</h3>
+        <Route path='/children' component={Children}/>
+        {/* <Route path='/children/:child' component={Child}/> */}
 
 
-     {/* Seshan Working */}
+        <Route path='/children/:child'/>
+            <List wishList={wishList} />
+            <Link to='/children/:child/add'>
+              Add Wish List
+            </Link>
+        </Route>
+
+       <Route
+            path='/children/:child/add'
+            render={() => <Form wishList={wishList} setWishList={setWishList} />} />
+          
+
+        
       </div>
+       
     </>
   )
 }
