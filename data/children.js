@@ -86,7 +86,7 @@ export default {
   Troy : {
     image: 'troy.jpg',
     wishlist: [
-      { giftname: 'Apple Mac Mini' , gifturl: 'apple.com'},
+      { giftname: 'Apple Macbook Air' , gifturl: 'apple.com'},
     ]
   },
   Nathan : {
