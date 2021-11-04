@@ -7,8 +7,8 @@ function App () {
   return (
     <>
       <div className='title'>
-        <img src='/images/color_earth.gif' />
-        <h1>Navigating the worldwide routes</h1>
+        <img src='/images/santa.gif' />
+        <h1>Santa's Shopping List </h1>
       </div>
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className='main'>
