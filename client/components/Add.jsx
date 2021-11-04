@@ -30,7 +30,8 @@ function Add({ setWishList, wishList }) {
       description: ''
     })
 
-    history.push('/children/:child')
+    // commenting out the following line fixed a routing bug!
+    // history.push('/children/:child')
   }
 
   function handleForm(event) {
