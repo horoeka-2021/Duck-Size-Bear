@@ -79,13 +79,276 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
+/***/ "./client/components/Add.jsx":
+/*!***********************************!*\
+  !*** ./client/components/Add.jsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _data_children__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data/children */ "./data/children.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+function Add(_ref) {
+  var setWishList = _ref.setWishList,
+      wishList = _ref.wishList;
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useHistory)();
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    name: '',
+    description: ''
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      form = _useState2[0],
+      setForm = _useState2[1];
+
+  function handleAdd(event) {
+    event.preventDefault(); // get the highest id in the array
+
+    var maxId = Math.max.apply(Math, _toConsumableArray(wishList.map(function (wishList) {
+      return wishList.id;
+    }))); // add the id property to the form
+
+    var newForm = _objectSpread(_objectSpread({}, form), {}, {
+      id: maxId + 1
+    }); // add a new element the existing array
+
+
+    var newWishList = [].concat(_toConsumableArray(wishList), [newForm]); // set the state
+
+    setWishList(newWishList);
+    setForm({
+      name: '',
+      description: ''
+    });
+    history.push('/children/:child');
+  }
+
+  function handleForm(event) {
+    var value = event.target.value;
+    var name = event.target.name;
+    setForm(_objectSpread(_objectSpread({}, form), {}, _defineProperty({}, name, value)));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Name", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    name: "name",
+    value: form.name,
+    onChange: handleForm
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", null, "Description", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    name: "description",
+    value: form.description,
+    onChange: handleForm
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    onClick: handleAdd
+  }, "Add"));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Add);
+
+/***/ }),
+
 /***/ "./client/components/App.jsx":
 /*!***********************************!*\
   !*** ./client/components/App.jsx ***!
   \***********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/client/components/App.jsx: Expected corresponding JSX closing tag for <div> (32:8)\n\n\u001b[0m \u001b[90m 30 | \u001b[39m              \u001b[33mAdd\u001b[39m \u001b[33mWish\u001b[39m \u001b[33mList\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mLink\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mRoute\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 34 | \u001b[39m       \u001b[33m<\u001b[39m\u001b[33mRoute\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 | \u001b[39m            path\u001b[33m=\u001b[39m\u001b[32m'/children/:child/add'\u001b[39m\u001b[0m\n    at Object._raise (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:748:17)\n    at Object.raiseWithData (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:741:17)\n    at Object.raise (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:735:17)\n    at Object.jsxParseElementAt (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:4725:16)\n    at Object.jsxParseElementAt (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:4693:32)\n    at Object.jsxParseElement (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:4751:17)\n    at Object.parseExprAtom (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:4758:19)\n    at Object.parseExprSubscripts (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10150:23)\n    at Object.parseUpdate (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10130:21)\n    at Object.parseMaybeUnary (/home/seshan/Dev_Academy/Week-4/Duck-Size-Bear/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10119:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Children__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Children */ "./client/components/Children.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _Add__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Add */ "./client/components/Add.jsx");
+/* harmony import */ var _List__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./List */ "./client/components/List.jsx");
+/* harmony import */ var _Child__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Child */ "./client/components/Child.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+var initial = [{
+  id: 1,
+  name: 'Haircut',
+  description: ''
+}];
+
+function App() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(initial),
+      _useState2 = _slicedToArray(_useState, 2),
+      wishList = _useState2[0],
+      setWishList = _useState2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "title"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "main"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+    path: "/children",
+    component: _Children__WEBPACK_IMPORTED_MODULE_1__.default
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+    path: "/children/:child"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Child__WEBPACK_IMPORTED_MODULE_4__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_List__WEBPACK_IMPORTED_MODULE_3__.default, {
+    wishList: wishList
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
+    to: "/children/:child/add"
+  }, "Add Wish List"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+    path: "/children/:child/add",
+    render: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Add__WEBPACK_IMPORTED_MODULE_2__.default, {
+        wishList: wishList,
+        setWishList: setWishList
+      });
+    }
+  }))));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/***/ }),
+
+/***/ "./client/components/Child.jsx":
+/*!*************************************!*\
+  !*** ./client/components/Child.jsx ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _data_children__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data/children */ "./data/children.js");
+
+
+
+
+function Child(props) {
+  var _useParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useParams)(),
+      child = _useParams.child;
+
+  var _childrenObj$child = _data_children__WEBPACK_IMPORTED_MODULE_1__.default[child],
+      image = _childrenObj$child.image,
+      wishlist = _childrenObj$child.wishlist;
+  console.log(wishlist);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, child), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "./images/".concat(image)
+  }))));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Child);
+
+/***/ }),
+
+/***/ "./client/components/Children.jsx":
+/*!****************************************!*\
+  !*** ./client/components/Children.jsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _data_children__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data/children */ "./data/children.js");
+
+
+
+var childrenArr = Object.keys(_data_children__WEBPACK_IMPORTED_MODULE_1__.default);
+
+var Children = function Children() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Children"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, childrenArr.map(function (child) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      key: child
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+      to: "/children/".concat(child)
+    }, child));
+  })));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Children);
+
+/***/ }),
+
+/***/ "./client/components/List.jsx":
+/*!************************************!*\
+  !*** ./client/components/List.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+function List(props) {
+  console.log(props.wishList);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, props.wishList.map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      key: item.id
+    }, item.name, item.description);
+  })));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (List);
 
 /***/ }),
 
@@ -107,6 +370,176 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('DOMContentLoaded', function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_App__WEBPACK_IMPORTED_MODULE_2__.default, null)), document.getElementById('app'));
+});
+
+/***/ }),
+
+/***/ "./data/children.js":
+/*!**************************!*\
+  !*** ./data/children.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  Angus: {
+    image: 'angus.jpg',
+    wishlist: [{
+      giftname: 'sci-fi book',
+      gifturl: 'bookdepository.com'
+    }]
+  },
+  Ben: {
+    image: 'ben.png',
+    wishlist: [{
+      giftname: 'human bird',
+      gifturl: 'aucklandzoo.co.nz'
+    }]
+  },
+  Goretti: {
+    image: 'goretti.jpg',
+    wishlist: [{
+      giftname: 'selfie ring light',
+      gifturl: 'cottonon.co.nz'
+    }]
+  },
+  Nicky: {
+    image: 'nicky.jpg',
+    wishlist: [{
+      giftname: 'milk tea',
+      gifturl: 'wucha.nz'
+    }]
+  },
+  Julianne: {
+    image: 'juilianne.jpg',
+    wishlist: [{
+      giftname: 'PC fans',
+      gifturl: 'pbtech.co.nz'
+    }]
+  },
+  Tane: {
+    image: 'tane.jpg',
+    wishlist: [{
+      giftname: 'mechanical keyboard',
+      gifturl: 'aliexpress.com'
+    }]
+  },
+  Tommy: {
+    image: 'tommy.jpg',
+    wishlist: [{
+      giftname: 'web cam',
+      gifturl: 'pbtech.co.nz'
+    }]
+  },
+  Vimal: {
+    image: 'vimal.jpg',
+    wishlist: [{
+      giftname: 'afghan food',
+      gifturl: 'afghan.co.nz'
+    }]
+  },
+  Ying: {
+    image: 'ying.jpg',
+    wishlist: [{
+      giftname: 'paint set',
+      gifturl: 'gordonharris.co.nz'
+    }]
+  },
+  Joshua: {
+    image: 'joshua.jpg',
+    wishlist: [{
+      giftname: 'set of drums',
+      gifturl: 'musicplanet.co.nz'
+    }]
+  },
+  Seshan: {
+    image: 'seshan.jpg',
+    wishlist: [{
+      giftname: 'laptop',
+      gifturl: 'noelleeming.co.nz'
+    }]
+  },
+  Crystal: {
+    image: 'crystal.jpg',
+    wishlist: [{
+      giftname: 'standing desk',
+      gifturl: 'unofurniture.co.nz'
+    }]
+  },
+  Sean: {
+    image: 'sean.jpg',
+    wishlist: [{
+      giftname: 'set of knives',
+      gifturl: 'stevens.co.nz'
+    }]
+  },
+  James: {
+    image: 'james.jpg',
+    wishlist: [{
+      giftname: 'Apple Macbook Pro',
+      gifturl: 'apple.com'
+    }]
+  },
+  Troy: {
+    image: 'troy.jpg',
+    wishlist: [{
+      giftname: 'Apple Macbook Air',
+      gifturl: 'apple.com'
+    }]
+  },
+  Nathan: {
+    image: 'nathan.jpg',
+    wishlist: [{
+      giftname: 'Dog toys',
+      gifturl: 'animates.co.nz'
+    }]
+  },
+  Lauren: {
+    image: 'lauren.jpg',
+    wishlist: [{
+      giftname: 'drone',
+      gifturl: 'pbtech.co.nz'
+    }]
+  },
+  Jared: {
+    image: 'jared.jpg',
+    wishlist: [{
+      giftname: 'board game',
+      gifturl: 'mightyape.co.nz'
+    }]
+  },
+  Prue: {
+    image: 'prue.jpg',
+    wishlist: [{
+      giftname: 'Ying\'s tea towel',
+      gifturl: 'yingart.co.nz'
+    }]
+  },
+  Eleanor: {
+    image: 'eleanor.jpg',
+    wishlist: [{
+      giftname: 'noise cancelling headphones',
+      gifturl: 'pbtech.co.nz'
+    }]
+  },
+  Ahmad: {
+    image: 'ahmad.jpg',
+    wishlist: [{
+      giftname: 'banana',
+      gifturl: 'countdown.co.nz'
+    }]
+  },
+  Rav: {
+    image: 'rav.jpg',
+    wishlist: [{
+      giftname: 'internet',
+      gifturl: 'chorus.co.nz'
+    }]
+  }
 });
 
 /***/ }),
