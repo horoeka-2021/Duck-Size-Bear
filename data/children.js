@@ -24,7 +24,7 @@ export default {
     ]
   },
   Julianne: {
-    image: 'juilianne.jpg',
+    image: 'juilianne.png',
     wishlist: [
       { giftname: 'PC fans', gifturl: 'pbtech.co.nz' }
     ]
@@ -36,7 +36,7 @@ export default {
     ]
   },
   Tommy: {
-    image: 'tommy.jpg',
+    image: 'tommy.jpeg',
     wishlist: [
       { giftname: 'web cam', gifturl: 'pbtech.co.nz' }
     ]
@@ -48,7 +48,7 @@ export default {
     ]
   },
   Ying: {
-    image: 'ying.jpg',
+    image: 'ying.jpeg',
     wishlist: [
       { giftname: 'paint set', gifturl: 'gordonharris.co.nz' }
     ]
@@ -66,7 +66,7 @@ export default {
     ]
   },
   Crystal: {
-    image: 'crystal.jpg',
+    image: 'crystal.png',
     wishlist: [
       { giftname: 'standing desk', gifturl: 'unofurniture.co.nz' }
     ]
@@ -114,7 +114,7 @@ export default {
     ]
   },
   Eleanor: {
-    image: 'eleanor.jpg',
+    image: 'eleanor.png',
     wishlist: [
       { giftname: 'noise cancelling headphones', gifturl: 'pbtech.co.nz' }
     ]
