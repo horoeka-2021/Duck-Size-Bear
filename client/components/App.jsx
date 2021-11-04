@@ -15,6 +15,8 @@ function App () {
     <>
       <div>
         <div className='title'>
+          <img src='/images/santa.gif' />
+          <h1>Santa's Shopping List </h1>
         </div>
 
         <div className='main'>
