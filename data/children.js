@@ -1,134 +1,134 @@
 export default {
-  Angus : {
+  Angus: {
     image: 'angus.jpg',
     wishlist: [
-      { giftname: 'sci-fi book' , gifturl: 'bookdepository.com'},
+      { giftname: 'sci-fi book', gifturl: 'bookdepository.com' }
     ]
   },
-  Ben : {
-    image: 'ben.jpg',
+  Ben: {
+    image: 'ben.png',
     wishlist: [
-      { giftname: 'human bird' , gifturl: 'aucklandzoo.co.nz'},
+      { giftname: 'human bird', gifturl: 'aucklandzoo.co.nz' }
     ]
   },
-  Goretti : {
+  Goretti: {
     image: 'goretti.jpg',
     wishlist: [
-      { giftname: 'selfie ring light' , gifturl: 'cottonon.co.nz'},
+      { giftname: 'selfie ring light', gifturl: 'cottonon.co.nz' }
     ]
   },
-  Nicky : {
+  Nicky: {
     image: 'nicky.jpg',
     wishlist: [
-      { giftname: 'milk tea' , gifturl: 'wucha.nz'},
+      { giftname: 'milk tea', gifturl: 'wucha.nz' }
     ]
   },
-  Julianne : {
+  Julianne: {
     image: 'juilianne.jpg',
     wishlist: [
-      { giftname: 'PC fans' , gifturl: 'pbtech.co.nz'},
+      { giftname: 'PC fans', gifturl: 'pbtech.co.nz' }
     ]
   },
-  Tane : {
+  Tane: {
     image: 'tane.jpg',
     wishlist: [
-      { giftname: 'mechanical keyboard' , gifturl: 'aliexpress.com'},
+      { giftname: 'mechanical keyboard', gifturl: 'aliexpress.com' }
     ]
   },
-  Tommy : {
+  Tommy: {
     image: 'tommy.jpg',
     wishlist: [
-      { giftname: 'web cam' , gifturl: 'pbtech.co.nz'},
+      { giftname: 'web cam', gifturl: 'pbtech.co.nz' }
     ]
   },
-  Vimal : {
+  Vimal: {
     image: 'vimal.jpg',
     wishlist: [
-      { giftname: 'afghan food' , gifturl: 'afghan.co.nz'},
+      { giftname: 'afghan food', gifturl: 'afghan.co.nz' }
     ]
   },
-  Ying : {
+  Ying: {
     image: 'ying.jpg',
     wishlist: [
-      { giftname: 'paint set' , gifturl: 'gordonharris.co.nz'},
+      { giftname: 'paint set', gifturl: 'gordonharris.co.nz' }
     ]
   },
-  Joshua : {
+  Joshua: {
     image: 'joshua.jpg',
     wishlist: [
-      { giftname: 'set of drums' , gifturl: 'musicplanet.co.nz'},
+      { giftname: 'set of drums', gifturl: 'musicplanet.co.nz' }
     ]
   },
-  Seshan : {
+  Seshan: {
     image: 'seshan.jpg',
     wishlist: [
-      { giftname: 'laptop' , gifturl: 'noelleeming.co.nz'},
+      { giftname: 'laptop', gifturl: 'noelleeming.co.nz' }
     ]
   },
-  Crystal : {
+  Crystal: {
     image: 'crystal.jpg',
     wishlist: [
-      { giftname: 'standing desk' , gifturl: 'unofurniture.co.nz'},
+      { giftname: 'standing desk', gifturl: 'unofurniture.co.nz' }
     ]
   },
-  Sean : {
+  Sean: {
     image: 'sean.jpg',
     wishlist: [
-      { giftname: 'set of knives' , gifturl: 'stevens.co.nz'},
+      { giftname: 'set of knives', gifturl: 'stevens.co.nz' }
     ]
   },
-  James : {
+  James: {
     image: 'james.jpg',
     wishlist: [
-      { giftname: 'Apple Macbook Pro' , gifturl: 'apple.com'},
+      { giftname: 'Apple Macbook Pro', gifturl: 'apple.com' }
     ]
   },
-  Troy : {
+  Troy: {
     image: 'troy.jpg',
     wishlist: [
-      { giftname: 'Apple Macbook Air' , gifturl: 'apple.com'},
+      { giftname: 'Apple Macbook Air', gifturl: 'apple.com' }
     ]
   },
-  Nathan : {
+  Nathan: {
     image: 'nathan.jpg',
     wishlist: [
-      { giftname: 'Dog toys' , gifturl: 'animates.co.nz'},
+      { giftname: 'Dog toys', gifturl: 'animates.co.nz' }
     ]
   },
-  Lauren : {
+  Lauren: {
     image: 'lauren.jpg',
     wishlist: [
-      { giftname: 'drone' , gifturl: 'pbtech.co.nz'},
+      { giftname: 'drone', gifturl: 'pbtech.co.nz' }
     ]
   },
-  Jared : {
+  Jared: {
     image: 'jared.jpg',
     wishlist: [
-      { giftname: 'board game' , gifturl: 'mightyape.co.nz'},
+      { giftname: 'board game', gifturl: 'mightyape.co.nz' }
     ]
   },
-  Prue : {
+  Prue: {
     image: 'prue.jpg',
     wishlist: [
-      { giftname: 'Ying\'s tea towel' , gifturl: 'yingart.co.nz'},
+      { giftname: 'Ying\'s tea towel', gifturl: 'yingart.co.nz' }
     ]
   },
-  Eleanor : {
+  Eleanor: {
     image: 'eleanor.jpg',
     wishlist: [
-      { giftname: 'noise cancelling headphones' , gifturl: 'pbtech.co.nz'},
+      { giftname: 'noise cancelling headphones', gifturl: 'pbtech.co.nz' }
     ]
   },
-  Ahmad : {
+  Ahmad: {
     image: 'ahmad.jpg',
     wishlist: [
-      { giftname: 'banana' , gifturl: 'countdown.co.nz'},
+      { giftname: 'banana', gifturl: 'countdown.co.nz' }
     ]
   },
-  Rav : {
+  Rav: {
     image: 'rav.jpg',
     wishlist: [
-      { giftname: 'internet' , gifturl: 'chorus.co.nz'},
+      { giftname: 'internet', gifturl: 'chorus.co.nz' }
     ]
   }
 }
