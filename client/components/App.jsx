@@ -4,13 +4,13 @@ import { Route, Link } from 'react-router-dom'
 import childrenObj from '../../data/children'
 
 import Add from './Add'
-import List from './List'
+// import List from './List'
 import Child from './Child'
 // import Add from './Add'
 
 const initial = [
   // { id: 1, name: 'Haircut', description: '' }
-  {...childrenObj}
+  { ...childrenObj }
 ]
 function App () {
   const [wishList, setWishList] = useState(initial)
@@ -24,6 +24,7 @@ function App () {
 
         <div className='main'>
           <h3>Home</h3>
+          <h1 style={{ padding: '10px' }}><Link to='/children' exact>Children</Link></h1>
           <Route path='/children' component={Children}/>
           {/* <Route path='/children/:child' component={Child}/> */}
 
