@@ -2,21 +2,18 @@ import React from 'react'
 import childrenObj from '../../data/children'
 
 function List (props) {
-  console.log(props.wishList)
-  console.log("Wish List: ", childrenObj[props.child].wishList)
-  
-  console.log("Log Child", props.child)
+  console.log("childrenObj child: ", childrenObj[props.child].wishlist)
 
-    console.log("Wish List Child Object: ", props.wishList[0][props.child])
   return (
     <div>
       <ul>
-        {props.wishList[0][props.child].wishList.map(item =>
-          <li key={item.id}>
-            {item.name}
-            {item.description}
+        {childrenObj[props.child].wishlist.map(item =>
+          <li key={item.giftname}>
+            <span>Gift: {item.giftname}</span>
+            <ul>
+              <li>Online Store URL: {item.gifturl}</li>
+            </ul>
           </li>
-
         )}
       </ul>
     </div>

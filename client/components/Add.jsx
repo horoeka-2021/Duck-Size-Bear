@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import childrenData from '../../data/children'
 
 function Add({ setWishList, wishList }) {
-  const history = useHistory()
+  // const history = useHistory()
   const [form, setForm] = useState({
     name: '',
     description: ''
