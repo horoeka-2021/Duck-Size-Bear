@@ -59,4 +59,4 @@ function Add({ setWishList, wishList }) {
 }
 
 
-export default Add;
+export default Add
