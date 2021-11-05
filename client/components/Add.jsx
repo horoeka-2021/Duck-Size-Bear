@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router';
+import { useParams } from 'react-router';
+import { useHistory } from 'react-router';
 import childrenData from '../../data/children'
 
-function Add({ setWishList, wishList }) {
-  // const history = useHistory()
+function Add ({ setWishList, wishList }) {
+  // console.log('wishLilst: ', wishList)
+
+  const history = useHistory()
   const [form, setForm] = useState({
-    name: '',
-    description: ''
+    giftname: '',
+    gifturl: ''
   })
+  
+  // find out what child we want to add to
+  const { child } = useParams()
+  // console.log(child)
 
   function handleAdd(event) {
     event.preventDefault()
@@ -23,15 +30,20 @@ function Add({ setWishList, wishList }) {
     // add a new element the existing array
     const newWishList = [...wishList, newForm]
 
-    // set the state
-    setWishList(newWishList)
+    // find specific child, then add newForm into their wishlist array
+    const childsNewWishlist = [...wishList[0][child].wishlist, newForm]
+    // const newWishList = [...wishList[0][child].wishlist, newForm]
+    wishList[0][child].wishlist = childsNewWishlist
+
+    // set the state (reset the form)
+    setWishList(wishList)
     setForm({
-      name: '',
-      description: ''
+      giftname: '',
+      gifturl: ''
     })
 
     // commenting out the following line fixed a routing bug!
-    // history.push('/children/:child')
+    history.push(`/children/${child}`)
   }
 
   function handleForm(event) {
@@ -47,16 +59,15 @@ function Add({ setWishList, wishList }) {
   return (
     <form>
       <label>
-        Name
-        <input name='name' value={form.name} onChange={handleForm} />
+        Gift
+        <input name='giftname' value={form.giftname} onChange={handleForm} />
       </label>
       <label>
-        Description
-        <input name='description' value={form.description} onChange={handleForm} />
+        Online Store URL
+        <input name='gifturl' value={form.gifturl} onChange={handleForm} />
       </label>
       <button onClick={handleAdd}>Add</button>
     </form>);
 }
-
 
 export default Add

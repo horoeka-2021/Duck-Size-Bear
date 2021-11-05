@@ -3,9 +3,10 @@ import Children from './Children'
 import { Route, Link } from 'react-router-dom'
 import childrenObj from '../../data/children'
 
-import Form from './Add'
+import Add from './Add'
 import List from './List'
 import Child from './Child'
+// import Add from './Add'
 
 const initial = [
   // { id: 1, name: 'Haircut', description: '' }
@@ -38,7 +39,7 @@ function App () {
         <div>
           <Route
             path='/children/:child/add'
-            render={() => <Form wishList={wishList} setWishList={setWishList} />} />
+            render={() => <Add wishList={wishList} setWishList={setWishList} />} />
         </div>
 
       </div>

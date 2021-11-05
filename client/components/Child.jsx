@@ -9,8 +9,6 @@ function Child (props) {
 
   const { image, wishlist } = childrenObj[child]
 
-  console.log(wishlist)
-
   return (
     <>
       <div>
