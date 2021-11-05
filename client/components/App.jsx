@@ -18,29 +18,33 @@ function App () {
     <>
       <div>
         <div className='title'>
-          <img src='/images/santa.gif' />
+          <img className="homePageGif" src='/images/santaTrans.gif' />
           <h1>Santa's Shopping List </h1>
         </div>
 
         <div className='main'>
-          <h3>Home</h3>
-          <h1 style={{ padding: '10px' }}><Link to='/children' exact>Children</Link></h1>
-          <Route path='/children' component={Children}/>
-          {/* <Route path='/children/:child' component={Child}/> */}
+          <div className='styleDiv'>
+            <Route path='/children' component={Children}/>
+            {/* <Route path='/children/:child' component={Child}/> */}
 
-          <Route path='/children/:child'>
-            <Child state={wishList} />
-            {/* <List wishList={wishList} /> */}
-            {/* <Link to='/children/:child/add'>
-              Add Wish List
-            </Link> */}
-          </Route>
-        </div>
+            <div className='child'>
+              <Route path='/children/:child'>
+                <Child state={wishList} />
+                {/* <List wishList={wishList} /> */}
+                {/* <Link to='/children/:child/add'>
+                  Add Wish List
+                </Link> */}
+              </Route>
+              <div className="randomDiv">
 
-        <div>
-          <Route
-            path='/children/:child/add'
-            render={() => <Add wishList={wishList} setWishList={setWishList} />} />
+                <div className='form'>
+                  <Route
+                    path='/children/:child/add'
+                    render={() => <Add wishList={wishList} setWishList={setWishList} />} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
