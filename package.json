@@ -1,8 +1,8 @@
 {
-  "name": "worldwide-routing",
+  "name": "santas-shopping-list",
   "version": "0.2.0",
-  "description": "Using React Router to navigate the globe",
-  "repository": "https://github.com/dev-academy-challenges/worldwide-routing.git",
+  "description": "A shopping list for santa to buy presents for the bootcamp cohort",
+  "repository": "https://github.com/horoeka-2021/Duck-Size-Bear/",
   "main": "server/index.js",
   "scripts": {
     "start": "run-p webpack server",
