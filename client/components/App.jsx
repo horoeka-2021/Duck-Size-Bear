@@ -7,6 +7,7 @@ import Add from './Add'
 // import List from './List'
 import Child from './Child'
 // import Add from './Add'
+import Nav from './Nav'
 
 const initial = [
   // { id: 1, name: 'Haircut', description: '' }
@@ -21,6 +22,8 @@ function App () {
           <img className="homePageGif" src='/images/santaTrans.gif' />
           <h1>Santa&apos;s Shopping List </h1>
         </div>
+
+        <Route path='/' exact component={Nav} />
 
         <div className='main'>
           <div className='styleDiv'>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router';
-import { useHistory } from 'react-router';
+import React, { useState } from 'react'
+import { useParams, useHistory } from 'react-router'
+
 import childrenData from '../../data/children'
 
 function Add ({ setWishList, wishList }) {
@@ -11,12 +11,12 @@ function Add ({ setWishList, wishList }) {
     giftname: '',
     gifturl: ''
   })
-  
+
   // find out what child we want to add to
   const { child } = useParams()
   // console.log(child)
 
-  function handleAdd(event) {
+  function handleAdd (event) {
     event.preventDefault()
 
     // get the highest id in the array
@@ -46,7 +46,7 @@ function Add ({ setWishList, wishList }) {
     history.push(`/children/${child}`)
   }
 
-  function handleForm(event) {
+  function handleForm (event) {
     const value = event.target.value
     const name = event.target.name
 
@@ -67,7 +67,7 @@ function Add ({ setWishList, wishList }) {
         <input name='gifturl' value={form.gifturl} onChange={handleForm} />
       </label>
       <button onClick={handleAdd}>Add</button>
-    </form>);
+    </form>)
 }
 
 export default Add
