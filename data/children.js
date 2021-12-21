@@ -110,7 +110,7 @@ export default {
   Prue: {
     image: 'prue.jpg',
     wishlist: [
-      { giftname: 'Ying\'s tea towel', gifturl: 'yingart.co.nz' }
+      { giftname: 'Tea towel with art by Ying', gifturl: 'yingart.co.nz' }
     ]
   },
   Eleanor: {

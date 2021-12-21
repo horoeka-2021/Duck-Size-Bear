@@ -19,7 +19,7 @@ function App () {
       <div>
         <div className='title'>
           <img className="homePageGif" src='/images/santaTrans.gif' />
-          <h1>Santa's Shopping List </h1>
+          <h1>Santa&apos;s Shopping List </h1>
         </div>
 
         <div className='main'>
